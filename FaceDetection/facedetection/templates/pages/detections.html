@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+ {% block title %}
+    Detections Page          
+ {% endblock  %}
+     
+ 
+ {% block content %}
+   
+ {% for detection in  detections%}
+ 
+ <div class="container mt-5">
+   <div class="row">
+      <div class="sm-12">
+                 
+         <div class="card" >
+            
+            
+               
+                 <img src="{{detection.image.url}}" width="120">
+                    <div class="card-body">
+                       <h5 class="card-title">{{detection.name}}</h5>
+                       <p class="card-text">{{detection.date}}</p>
+                       <p class="card-text">{{detection.time}}</p>
+                       
+                    </div>
+          </div>
+      </div>          
+   </div>
+ </div>
+{% endfor %}
+<div class="container">
+   <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-end">
+         
+         {% if detections.has_previous %}
+         <li class="page-item ">
+            <a class="page-link" href="?page={{detections.previous_page_number}}" tabindex="-1">Previous</a>
+          </li>
+         {% else %}
+         <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
+          </li>
+         {% endif %}
+        
+        <li class="page-item"><a class="page-link" href="#">{{detections.number}}</a></li>
+          {% if detections.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{detections.next_page_number}}">Next</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="?page={{detections.paginator.num_pages}}">Last</a>
+          </li>
+   
+          {% endif %}
+        
+      </ul>
+    </nav>
+
+</div>
+
+ {% endblock  %}
+                    

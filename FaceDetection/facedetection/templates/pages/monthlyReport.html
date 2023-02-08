@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+ {% block title %}
+    Weekly Report Page          
+ {% endblock  %}
+     
+ 
+ {% block content %}
+ <div class="container md-5">
+   <form  method="post">
+      {% csrf_token %}
+      {{form}}
+      
+      <input type="submit" value="Find Detections">
+   </form>  
+   {% if messages %}
+   {% for message in messages %}
+   <li>
+       {% if message.tags %}
+            <div class="alert alert-{{ message.tags }} msg alert-dismissible  in show" role="alert">{{ message }}</div>
+       {% else %}
+           <div class="alert alert-info msg alert-dismissible in show" role="alert" >{{ message }}</div>
+       {% endif %}
+       
+   </li>
+   
+   {% endfor %}
+{% endif %}
+ </div>  
+ {% for detection in  detections%}
+ 
+ <div class="container mt-5">
+   <div class="row">
+      <div class="sm-12">
+                 
+         <div class="card" >
+            
+            
+               
+                 <img src="{{detection.image.url}}" width="120">
+                    <div class="card-body">
+                       <h5 class="card-title">{{detection.name}}</h5>
+                       <p class="card-text">{{detection.date}}</p>
+                       <p class="card-text">{{detection.time}}</p>
+                       
+                    </div>
+          </div>
+      </div>          
+   </div>
+ </div>
+{% endfor %}
+
+ {% endblock  %}
+                    

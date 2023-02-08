@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+ {% block title %}
+    Detections Page          
+ {% endblock  %}
+     
+ 
+ {% block content %}
+ <div class="container md-5">
+    <form  method="post">
+       {% csrf_token %}
+       {{form}}
+       
+       <input type="submit" value="Take Pictures">
+    </form>                
+    
+    
+    {% if messages %}
+            {% for message in messages %}
+            <li>
+                {% if message.tags %}
+                     <div class="alert alert-{{ message.tags }} msg alert-dismissible  in show" role="alert">{{ message }}</div>
+                {% else %}
+                    <div class="alert alert-info msg alert-dismissible in show" role="alert" >{{ message }}</div>
+                {% endif %}
+                
+            </li>
+            
+            {% endfor %}
+        {% endif %}
+      
+ </div>
+ 
+
+
+
+ {% endblock  %}
+                    

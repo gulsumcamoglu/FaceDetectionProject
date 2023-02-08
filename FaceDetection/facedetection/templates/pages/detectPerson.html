@@ -1,0 +1,31 @@
+
+ {% extends 'base.html' %}
+
+ 
+ {% block title %}
+    Person Detection Page          
+ {% endblock  %}
+ 
+ 
+ {% block content %}
+ 
+ <div class="container mt-5">
+                    <div class="row">
+                       <div class="sm-12">
+                                  
+                          <div class="card" >
+                                  
+                                     <div class="card-body">
+                                        <form  method="post">
+                                          {% csrf_token %}
+                                          {{form}}
+                                          
+                                          <input type="submit" value="Take Attendance">
+                                       </form> 
+                                     </div>
+                           </div>
+                       </div>          
+                    </div>
+                  </div>
+ {% endblock  %}
+                    
