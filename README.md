@@ -1,8 +1,8 @@
 # Face Detection Project
 <p> 
-      <img width="333" alt="Ekran Resmi 2021-06-20 15 44 14" src="https://user-images.githubusercontent.com/69233551/217866964-28e8e76f-9696-45c9-afef-ac414e7f23a6.jpg">
-      <img height="222" width="333" alt="Ekran Resmi 2021-06-20 15 44 14" src="https://user-images.githubusercontent.com/69233551/217879393-c355754a-e588-483c-9890-cf0e185ca75d.jpg">
-      <img height="222" width="333" alt="Ekran Resmi 2021-06-20 15 44 14" src="https://user-images.githubusercontent.com/69233551/217880638-f858a6e8-c141-4eb3-83d2-5345a2a24721.jpg">
+      <img width="100" alt="Ekran Resmi 2021-06-20 15 44 14" src="https://user-images.githubusercontent.com/69233551/217866964-28e8e76f-9696-45c9-afef-ac414e7f23a6.jpg">
+      <img height="222" width="100" alt="Ekran Resmi 2021-06-20 15 44 14" src="https://user-images.githubusercontent.com/69233551/217879393-c355754a-e588-483c-9890-cf0e185ca75d.jpg">
+      <img height="222" width="100" alt="Ekran Resmi 2021-06-20 15 44 14" src="https://user-images.githubusercontent.com/69233551/217880638-f858a6e8-c141-4eb3-83d2-5345a2a24721.jpg">
 </p>
 
 Here is my Senior Design Project that I implemented to graduate from Software Engineering. It is a website where people's faces can be scanned and recorded. After being record, people's faces can be detected and recognized.
